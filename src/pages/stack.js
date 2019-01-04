@@ -13,15 +13,13 @@ const StackPage = () => (
     </Helmet>
     <section className="section is-size-5-desktop is-size-6-touch">
       <div className="container">
-        <h1 className="title has-text-centered">Stack</h1>
+        <h1 className="title  is-size-4 has-text-centered">Stack</h1>
         <hr />
-        <p className="content has-text-centered">
-          Tenho experiências com diversas ferramentas e tecnolcogias modernas,
-          que uso dependendo do projeto.
+        <p className="subtitle is-size-6 has-text-centered">
+          Essas são algumas das ferramentas que conheço e que compartilho na
+          minha stack no StackShare:
         </p>
-        <p className="content has-text-centered">
-          Compartilho minha stack no StackShare:
-        </p>
+
         <div className="columns is-centered">
           <div className="column is-half has-text-centered">
             <a

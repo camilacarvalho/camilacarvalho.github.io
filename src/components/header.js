@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 
 const navbarLinks = [
   { title: 'Home', link: '/' },
-  { title: 'Projects', link: '/projects' },
-  { title: 'Posts', link: '/posts' },
   { title: 'Stack', link: '/stack' },
 ];
 class Header extends Component {
@@ -25,42 +23,40 @@ class Header extends Component {
     const { isMenuOpen } = this.state;
     const burgerClass = isMenuOpen ? 'is-active' : '';
     return [
-      <div className="container">
-        <nav
-          className="navbar has-shadow is-spaced"
-          role="navigation"
-          aria-label="main navigation"
-        >
-          <div className="navbar-brand">
-            <Link className="navbar-item is-size-4" to="/">
-              {siteTitle}
-            </Link>
-            <button
-              className={`navbar-burger ${burgerClass}`}
-              type="button"
-              aria-label="menu"
-              onClick={this.handleMenu}
-            >
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-            </button>
+      <nav
+        className="navbar has-shadow is-spaced"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div className="navbar-brand">
+          <Link className="navbar-item is-size-5" to="/">
+            {siteTitle}
+          </Link>
+          <button
+            className={`navbar-burger ${burgerClass}`}
+            type="button"
+            aria-label="menu"
+            onClick={this.handleMenu}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </button>
+        </div>
+        <div className={`navbar-menu ${burgerClass}`}>
+          <div className="navbar-end">
+            {navbarLinks.map(navbarLink => [
+              <Link
+                className={'navbar-item is-size-6'}
+                to={navbarLink.link}
+                key={navbarLink.title}
+              >
+                {navbarLink.title}
+              </Link>,
+            ])}
           </div>
-          <div className={`navbar-menu ${burgerClass}`}>
-            <div className="navbar-end">
-              {navbarLinks.map(navbarLink => [
-                <Link
-                  className={'navbar-item is-size-5'}
-                  to={navbarLink.link}
-                  key={navbarLink.title}
-                >
-                  {navbarLink.title}
-                </Link>,
-              ])}
-            </div>
-          </div>
-        </nav>
-      </div>,
+        </div>
+      </nav>,
     ];
   };
 }
