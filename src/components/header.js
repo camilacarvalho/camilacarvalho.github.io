@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 
 const navbarLinks = [
   { title: 'Home', link: '/' },
-  { title: 'Stack', link: '/stack' },
+  { title: 'Projetos', link: '/projetos' },
+  { title: 'Competências', link: '/competencias' },
 ];
 class Header extends Component {
   constructor(props) {

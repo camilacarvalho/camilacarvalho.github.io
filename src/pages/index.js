@@ -1,68 +1,61 @@
 import React from 'react';
 import Card from '../components/card';
-import imagemMusiteca from '../assets/musiteca.png';
-import imagemTwoOaks from '../assets/twoOaks.jpg';
-import imagemBtd from '../assets/bibliaTodoDia.png';
-import imagemInstagram from '../assets/instagram.png';
-import imagemOmeqm from '../assets/oMestreEQuemManda.png';
-import imagemAgiliza from '../assets/agiliza.png';
 import Layout from '../components/layout';
 import profileImage from '../assets/profile.jpg';
-const projectDiscip = [
+import imagemEter from '../assets/eter.jpeg';
+import imagemUfcg from '../assets/ufcg.jpg';
+import imagemcodex from '../assets/codex.png';
+import imagemAeC from '../assets/aec.jpg';
+const experienciasp = [
   {
-    title: 'Agiliza',
-    subtitle:
-      'Aplicativo desenvolvido durante a disciplina de Engenharia de software utilizando Ionic 3 e Firebase',
-    link:
-      'https://github.com/camilacarvalho/Agiliza---projeto-disciplina-engenharia-de-software',
-    imagemLink: imagemAgiliza,
-    tags: ['agiliza', 'aplicativo', 'firebase', 'ionic 3'],
-  },
-  {
-    title: 'Musiteca',
-    subtitle:
-      'Site desenvolvido durante a disciplina de Projeto de software utilizando AngularJS, Spring Boot, Postgresql, Heroku',
-    link: 'http://minhamusiteca.herokuapp.com/',
-    imagemLink: imagemMusiteca,
-    tags: [
-      'Musiteca',
-      'site',
-      'Heroku',
-      'Spring Boot',
-      'AngularJS',
-      'Postgresql',
-    ],
+    title: 'Atendente Técnico na AeC – Relacionamento com Responsabilidade',
+    subtitle: 'Período:  02/01/2014 a 13/07/2015',
+    link: 'https://www.aec.com.br/',
+    imagemLink: imagemAeC,
+    tags: ['AeC', 'atendenteTecnico', 'informatica'],
   },
 ];
-const projectPessoais = [
+const formacoes = [
   {
-    title: 'O mestre é quem manda',
-    subtitle: 'Aplicativo desenvolvido utilizando Android Studio',
+    title: 'Técnico em Informática no ETER',
+    subtitle:
+      'Período: Janeiro de 2012 a julho de 2013 (Carga Horária: 1080 h/a).',
     link:
-      'https://play.google.com/store/apps/details?id=com.a2oak.omestreehquemmanda',
-    imagemLink: imagemOmeqm,
-    tags: ['Android', 'Android Studio', 'O mestre e quem manda', 'aplicativo'],
+      'http://www.redentorista.org.br/index.php/cursos-tecnicos/cursos-tecnicos/informatica.html',
+    imagemLink: imagemEter,
+    tags: ['Eter', 'tecnico', 'informatica', 'redentorista', 'formacao'],
   },
   {
-    title: 'Bíblia Todo Dia',
-    subtitle: 'Aplicativo desenvolvido utilizando ionic 3 e firebase',
-    link: '',
-    imagemLink: imagemBtd,
-    tags: ['biblia todo dia', 'aplicativo', 'firebase', 'ionic 3'],
+    title: 'Ciência da Computação na UFCG',
+    subtitle:
+      'Período: Julho de 2015 a Julho de 2020 (Carga Horária: 3.210 horas e 200 créditos).',
+    link: 'http://www.computacao.ufcg.edu.br/graduacao',
+    imagemLink: imagemUfcg,
+    tags: ['ciencia da computacao', 'ufcg', 'graduacao', '5 estrelas'],
+  },
+];
+const experiencias = [
+  {
+    title: 'Diretora de recursos humanos',
+    subtitle: 'na CODEX (Empresa Junior de Computação)',
+    link: 'https://www.facebook.com/codexjr/',
+    imagemLink: imagemcodex,
+    tags: ['ciencia da computacao', 'ufcg', 'graduacao', '5 estrelas'],
   },
   {
-    title: 'Two Oaks',
-    subtitle: 'Site desenvolvido utilizando Angular 6',
-    link: 'https://camilacarvalho.github.io/2oaks/#/',
-    imagemLink: imagemTwoOaks,
-    tags: ['Angular 6', 'Two oaks', 'site'],
-  },
-  {
-    title: 'Instagram @TwoOaksApps',
-    subtitle: 'Designer de postagens e logomarcas no @TwoOaksApps',
-    link: 'https://www.instagram.com/twooaksapps/',
-    imagemLink: imagemInstagram,
-    tags: ['instagram', 'design', 'postagens', 'logomarca'],
+    title: 'Monitorias na Universidade Federal de Campina Grande (UFCG)',
+    subtitle: 'nas disciplinas de Estrutura de dados e Lógica para computação',
+    link: 'http://www.computacao.ufcg.edu.br/graduacao/monitoria',
+    imagemLink: imagemUfcg,
+    tags: [
+      'ciencia da computacao',
+      'ufcg',
+      'graduacao',
+      '5 estrelas',
+      'monitoria',
+      'Logica para computacao',
+      'Estrutura de dados',
+    ],
   },
 ];
 const socialMedias = [
@@ -83,6 +76,7 @@ const socialMedias = [
     link: 'https://www.instagram.com/camilaoak_/',
   },
 ];
+
 const IndexPage = () => (
   <Layout>
     <div className="container">
@@ -104,7 +98,8 @@ const IndexPage = () => (
         <span role="img" aria-label="aceno">
           👩‍🎓 👩‍💻
         </span>
-        <p>Atualmente no 8º período</p>
+        <p>Atualmente no 8º período.</p>
+        <p>Campina Grande, Paraíba, Brasil</p>
         <div className="has-text-centered">
           {socialMedias.map(socialMedia => (
             <a
@@ -120,20 +115,41 @@ const IndexPage = () => (
         </div>
       </h2>
     </div>
-
+    <hr />
     <section className="section">
       <div className="container has-text-centered">
+        <h1 className="subtitle  is-size-5 has-text-centered">
+          Formação acadêmica
+        </h1>
+
         <div className="columns is-centered">
           <div className="column is-half">
-            <p className=" subtitle is-6 has-text-left">
-              Projetos desenvolvidos durante as disciplinas:
-            </p>
-            {projectDiscip.map(projectDis => (
-              <Card key={projectDis.title} {...projectDis} />
+            {formacoes.map(formacao => (
+              <Card key={formacao.title} {...formacao} />
             ))}
-            <p className="subtitle is-6 has-text-left">Outros projetos:</p>
-            {projectPessoais.map(projectPessoal => (
-              <Card key={projectPessoal.title} {...projectPessoal} />
+          </div>
+        </div>
+
+        <h1 className="subtitle  is-size-5 has-text-centered">
+          Experiências Acadêmicas
+        </h1>
+
+        <div className="columns is-centered">
+          <div className="column is-half">
+            {experiencias.map(experiencia => (
+              <Card key={experiencia.title} {...experiencia} />
+            ))}
+          </div>
+        </div>
+
+        <h1 className="subtitle  is-size-5 has-text-centered">
+          Experiências Profissionais
+        </h1>
+
+        <div className="columns is-centered">
+          <div className="column is-half">
+            {experienciasp.map(experienciap => (
+              <Card key={experienciap.title} {...experienciap} />
             ))}
           </div>
         </div>
