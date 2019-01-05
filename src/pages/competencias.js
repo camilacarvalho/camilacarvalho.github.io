@@ -80,7 +80,9 @@ const CompetenciasPage = () => (
             >
               Stack
             </a>
-            <p>Outras ferramentas:</p>
+            <p className="subtitle is-size-6 has-text-centered">
+              Outras ferramentas:
+            </p>
             <div class="columns">
               <div class="column">
                 <Card key={ferramenta1.title} {...ferramenta1} />

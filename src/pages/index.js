@@ -14,6 +14,14 @@ const experienciasp = [
     imagemLink: imagemAeC,
     tags: ['AeC', 'atendenteTecnico', 'informatica'],
   },
+  {
+    title: 'Aulas de informática básica',
+    subtitle:
+      'É lecionada a uma aluna em sua casa. Período:  outubro de 2017 até o momento',
+    link: 'https://www.aec.com.br/',
+    imagemLink: '',
+    tags: ['informatica basica', 'windows 8', 'microsoft office'],
+  },
 ];
 const formacoes = [
   {
